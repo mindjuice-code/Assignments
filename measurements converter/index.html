@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter">
+        <h1 class="title">Measurements converter</h1>
+        <select id="category" onchange="updateUnits()">
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+        </select>
+        <div class="inputField">
+            <input type="number" placeholder="Input" id="input_box">
+            <span>=</span>
+            <input type="number" placeholder="Result" id="result_box" readonly>
+        </div>
+        <div class="unit">
+            <select id="unitFrom"></select>
+            <select id="unitTo"></select>
+        </div>
+        <div class="btn">
+            <button onclick="clearInput()">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
